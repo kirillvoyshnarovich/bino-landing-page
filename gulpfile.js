@@ -3,10 +3,15 @@ const sass = require('gulp-sass');
 const pug = require('gulp-pug');
 const image = require('gulp-image');
 const browserSync = require('browser-sync').create();
+const autoprefixer = require('gulp-autoprefixer');
+const minifyJs = require('gulp-minify');
 
 gulp.task('sass', function () {
     return gulp.src('./src/styles/*.scss')
       .pipe(sass().on('error', sass.logError))
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false})) 
       .pipe(gulp.dest('./build/styles'));
   });
    
@@ -35,6 +40,19 @@ gulp.task('sass', function () {
             baseDir: "./build/"
         }
     });
+});
+
+gulp.task('minifyJs', function() {
+  gulp.src('./src/js/*.js')
+    .pipe(minify({
+        ext:{
+            src:'-debug.js',
+            min:'.js'
+        },
+        exclude: ['tasks'],
+        ignoreFiles: ['.combo.js', '-min.js']
+    }))
+    .pipe(gulp.dest('./build/js'))
 });
 
 
