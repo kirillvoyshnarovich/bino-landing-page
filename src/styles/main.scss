@@ -273,8 +273,15 @@ html {
         z-index: 10;
         left: 90px;
         top: 50px;
-    
+        -ms-top: 110px;
     }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+        .our-strengths__item-border{ top: 110px;} //for IE 11
+
+     }
+
+
 
 
     .our-strengths__item-icon {
@@ -296,6 +303,7 @@ html {
 
 
 }
+
 
 
 /*HOVER FOR BORDER ICON IN OUR-STRENGHTS__ITEM BLOCK*/
@@ -392,6 +400,7 @@ html {
     .our-services__block-with-icon {
         width:100%;
         position: absolute;
+        left:0px;
 
         .our-services__block-with-icon-wrapper {
             height:765px;
@@ -1339,14 +1348,18 @@ html {
             border:none;
             font-size:1.2rem;
             font-family: OpenSans-SemiBold;
-            line-height: 4;
             border-bottom:solid 1px #e5e5e5;
             color:#999999;
-
+            overflow:hidden;
+            height:50px;
         }
 
         .forma__input-message {
             rows:10;
+            height:90px;
+            min-height:90px;
+            padding-top:10px;
+            min-width:100%;
         }
 
         .forma__input-button {
@@ -3024,6 +3037,22 @@ html {
         }
     }
 
+    //BLOCK-WITH-BUTTON-AFTER-SLIDER
+
+    .block-with-botton-after-slaider {
+       
+        .button {
+            // margin: 30px;
+            width:185px;
+            padding:16px 0px;
+            // border:1px solid #ffffff;
+            // border-radius:3px;
+            // background:none;
+            // font-family: Open-Sans-Bold;
+            // color:#ffffff;
+            // margin:0px 47px;
+        }
+    }
 }
 
 
