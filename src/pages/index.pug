@@ -38,8 +38,8 @@ html(lang="eng-ru")
                                                               has been the industry's standard dummy text ever since the 1500s, when an unknown
                                                               printer took a gallery of type and scrambled it to make a type specimen book.
             .block-with-botton-after-slaider                                               
-                button.button GET STARTED NOW
-                button.button LEARN MORE
+                button.button.button-action GET STARTED NOW
+                button.button.button-action LEARN MORE
         section.main
             .conteiner
                 .our-strengthss
@@ -103,13 +103,13 @@ html(lang="eng-ru")
                                                 ing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus Page-
                                                 Make including versions of Lorem Ipsum.
 
-                        button.button.button_background-orange BROWSE OUR WORK
+                        button.button.button_background-orange.button-action BROWSE OUR WORK
             .our-services
                 .our-services__block-with-text
                     .indicator
-                        .indicator__block
-                        .indicator__block
-                        .indicator__block
+                        div(class="indicator__block indicator__block_visible" data-indicator="0")
+                        div(class="indicator__block" data-indicator="1")
+                        div(class="indicator__block" data-indicator="2")
                     .our-services__block-with-text-descriptions
                         .caption-item.caption-item_border-right OUR SERVICES
                         .our-services__block-with-text-item
@@ -132,16 +132,24 @@ html(lang="eng-ru")
                 .our-services__block-with-icon
                         .conteiner
                             .our-services__block-with-icon-wrapper
-                                .icon-border.icon-border_morgin-top
+                                div(class="icon-border icon-border_morgin-top" data-button="0")
                                 .icon-svg
                                     include ../image/icon-in-our-services-block/monitor.svg
-                                .icon-border.icon-border_morgin-top
+                                div(class="icon-border icon-border_morgin-top" data-button="1")
                                 .icon-svg
                                     include ../image/icon-in-our-services-block/layers.svg
-                                .icon-border.icon-border_morgin-top
+                                div(class="icon-border icon-border_morgin-top" data-button="2")
                                 .icon-svg                                       
                                     include ../image/icon-in-our-services-block/photo-camera.svg
                 .our-services__block-with-picture
+                    .our-services__block-with-picture-item.our-services__block-with-picture-item_visible
+                        //- img(src="image/picture-for-our-services-block/laptop-1.png" class="our-services__block-with-picture--image" alt="picture services")
+                    .our-services__block-with-picture-item
+                        //- img(src="image/picture-for-our-services-block/laptop-2.png" class="our-services__block-with-picture--image" alt="picture services")
+                    .our-services__block-with-picture-item
+                        //- img(src="image/picture-for-our-services-block/laptop-3.png" class="our-services__block-with-picture--image" alt="picture services")
+                    //- .our-services__block-with-picture-item
+
             .recent-works
                 p.recent-works__head RECENT WORKS
                 p.recent-works__description It has survived not only five centuries, but also the leap scrambled it to make a type
@@ -174,7 +182,10 @@ html(lang="eng-ru")
                                                                                                     span.span-slash /
                 .gallery
                     .gallery__item
-                        
+                        .gallery__item-wrapper
+                            span.gallery__item-wrapper-border
+                            p.gallery__item-wrapper-name-works T-SHIRT DESIGN
+                            p.gallery__item-wrapper-name-section art/t-shirt
                         img(class="gallery-picture" src="image/picture-in-block-recent-works/pic-1.png")
                     .gallery__item
                         .gallery__item-wrapper
@@ -183,16 +194,41 @@ html(lang="eng-ru")
                             p.gallery__item-wrapper-name-section art/t-shirt
                         img(class="gallery-picture" src="image/picture-in-block-recent-works/pic-2.png")
                     .gallery__item
+                        .gallery__item-wrapper
+                            span.gallery__item-wrapper-border
+                            p.gallery__item-wrapper-name-works T-SHIRT DESIGN
+                            p.gallery__item-wrapper-name-section art/t-shirt
                         img(class="gallery-picture" src="image/picture-in-block-recent-works/pic-3.png")
+                        
                     .gallery__item
+                        .gallery__item-wrapper
+                            span.gallery__item-wrapper-border
+                            p.gallery__item-wrapper-name-works T-SHIRT DESIGN
+                            p.gallery__item-wrapper-name-section art/t-shirt
                         img(class="gallery-picture" src="image/picture-in-block-recent-works/pic-4.png")
                     .gallery__item
+                        .gallery__item-wrapper
+                            span.gallery__item-wrapper-border
+                            p.gallery__item-wrapper-name-works T-SHIRT DESIGN
+                            p.gallery__item-wrapper-name-section art/t-shirt
                         img(class="gallery-picture" src="image/picture-in-block-recent-works/pic-5.png")
                     .gallery__item
+                        .gallery__item-wrapper
+                            span.gallery__item-wrapper-border
+                            p.gallery__item-wrapper-name-works T-SHIRT DESIGN
+                            p.gallery__item-wrapper-name-section art/t-shirt
                         img(class="gallery-picture" src="image/picture-in-block-recent-works/pic-6.png")
                     .gallery__item
+                        .gallery__item-wrapper
+                            span.gallery__item-wrapper-border
+                            p.gallery__item-wrapper-name-works T-SHIRT DESIGN
+                            p.gallery__item-wrapper-name-section art/t-shirt
                         img(class="gallery-picture" src="image/picture-in-block-recent-works/pic-7.png")
                     .gallery__item
+                        .gallery__item-wrapper
+                            span.gallery__item-wrapper-border
+                            p.gallery__item-wrapper-name-works T-SHIRT DESIGN
+                            p.gallery__item-wrapper-name-section art/t-shirt
                         img(class="gallery-picture" src="image/picture-in-block-recent-works/pic-8.png")
             .case-study
                 .conteiner
@@ -202,25 +238,54 @@ html(lang="eng-ru")
                         .line-with-dot__line
                         .line-with-dot__dot
                         .line-with-dot__line
-                    .block-with-ideas-and-button
-                        .icon-svg.icon-svg_border-square
-                            include ../image/icon-in-our-strengths-block/light-bulb.svg
-                        p.our-strengths__item-name.our-strengths__item-name_size-15 ACCUMULATE CREATIVE IDEAS
-                            span.line
-                        p.our-strengths__item-description.our-strengths__item-description_size-12.
-                                                         Lorem ipsum is simply dummy text of the
-                                                         printing and typesetting let. Lorem ipsum
-                                                         has been the industry. Lorem Ipsum is simply dummy
-                                                         text of the printing and typesetting let. Lorem
-                                                         Ipsum has been the industry printing and  type
-                                                         lorem Ipsum has been the setting let.
-                        button.button.button_background-orange READ MORE
+                    .block-with-ideas
+                        .block-with-ideas-and-button.case-for-text-block
+                            .icon-svg.icon-svg_border-square
+                                include ../image/icon-in-our-strengths-block/light-bulb.svg
+                            p.our-strengths__item-name.our-strengths__item-name_size-15 ACCUMULATE CREATIVE IDEAS
+                                span.line
+                            p.our-strengths__item-description.our-strengths__item-description_size-12.
+                                                            Lorem ipsum is simply dummy text of the
+                                                            printing and typesetting let. Lorem ipsum
+                                                            has been the industry. Lorem Ipsum is simply dummy
+                                                            text of the printing and typesetting let. Lorem
+                                                            Ipsum has been the industry printing and  type
+                                                            lorem Ipsum has been the setting let.
+                            button.button.button_background-orange.button-action READ MORE
+                        .block-with-ideas-and-button.case-for-text-block
+                            .icon-svg.icon-svg_border-square
+                                include ../image/icon-in-our-strengths-block/light-bulb.svg
+                            p.our-strengths__item-name.our-strengths__item-name_size-15 ACCUMULATE CREATIVE IDEAS
+                                span.line
+                            p.our-strengths__item-description.our-strengths__item-description_size-12.
+                                                            Lorem ipsum is simply dummy text of the
+                                                            printing and typesetting let. Lorem ipsum
+                                                            has been the industry. Lorem Ipsum is simply dummy
+                                                            text of the printing and typesetting let. Lorem
+                                                            Ipsum has been the industry printing and  type
+                                                            lorem Ipsum has been the setting let.
+                            button.button.button_background-orange.button-action READ MORE
+                        .block-with-ideas-and-button.case-for-text-block
+                            .icon-svg.icon-svg_border-square
+                                include ../image/icon-in-our-strengths-block/light-bulb.svg
+                            p.our-strengths__item-name.our-strengths__item-name_size-15 ACCUMULATE CREATIVE IDEAS
+                                span.line
+                            p.our-strengths__item-description.our-strengths__item-description_size-12.
+                                                            Lorem ipsum is simply dummy text of the
+                                                            printing and typesetting let. Lorem ipsum
+                                                            has been the industry. Lorem Ipsum is simply dummy
+                                                            text of the printing and typesetting let. Lorem
+                                                            Ipsum has been the industry printing and  type
+                                                            lorem Ipsum has been the setting let.
+                            button.button.button_background-orange.button-action READ MORE
                         .indicator.indicator_circle
-                             .indicator__block.indicator__block_circle
-                             .indicator__block.indicator__block_circle
-                             .indicator__block.indicator__block_circle
+                            div(class="indicator__block indicator__block_circle" data-button="0")
+                            div(class="indicator__block indicator__block_circle" data-button="1")
+                            div(class="indicator__block indicator__block_circle" data-button="2")
                     .case-study__picture
-                        img(class="case-study__picture-image" src="image/picture-in-case-study.png")
+                        img(class="case-study__picture-image case-for-picture" src="image/picture-in-case-study-1.png" alt="picture slaid study")
+                        img(class="case-study__picture-image case-for-picture" src="image/picture-in-case-study-2.png" alt="picture slaid study")
+                        img(class="case-study__picture-image case-for-picture" src="image/picture-in-case-study-3.png" alt="picture slaid study")
                 .case-study__companents
                     .conteiner
                         .companents
@@ -264,7 +329,7 @@ html(lang="eng-ru")
                                 p.services All Ranked URLs
                                 p.services International Support System
                                 p.services Social Media
-                                .button.button_background-orange-padding-160 CHOOSE PLAN
+                                button.button.button_background-orange-padding-160.button-action CHOOSE PLAN
                         .price
                             .price__head PREMIUM
                             .icon-border.icon-border_width-180
@@ -276,7 +341,7 @@ html(lang="eng-ru")
                                 p.services All Ranked URLs
                                 p.services International Support System
                                 p.services Social Media
-                                .button.button_background-orange-padding-160 CHOOSE PLAN
+                                button.button.button_background-orange-padding-160.button-action CHOOSE PLAN
                         .price
                             .price__head BUSINESS
                             .icon-border.icon-border_width-180
@@ -288,7 +353,7 @@ html(lang="eng-ru")
                                 p.services All Ranked URLss
                                 p.services International Support System
                                 p.services Social Media
-                                .button.button_background-orange-padding-160 CHOOSE PLAN
+                                button.button.button_background-orange-padding-160.button-action CHOOSE PLAN
             .our-team
                 .our-team__background-block
                     p.our-team__head OUR PRICING
@@ -314,8 +379,7 @@ html(lang="eng-ru")
                             p.team-info-block-people__name Kazi Erfans
                             p.team-info-block-people__professiaon UI/UX Design
                         .team-info-block-people
-                            .dee
-                                img(class="people-photo" src="image/photo-in-our-team-block/photo-4.png")
+                            img(class="people-photo" src="image/photo-in-our-team-block/photo-4.png")
                             span.team-info-block-people__line-after-photo
                             p.team-info-block-people__name Kazi Erfan
                             p.team-info-block-people__professiaon UI/UX Design
@@ -365,7 +429,8 @@ html(lang="eng-ru")
                         .line-with-dot__line
 
                     .our-blog__block-with-picture
-                        img(class="our-blog__block-with-picture-image" src="image/picture-for-our-blog-block/pic-1.png")
+                        .our-blog__block-picture
+                            img(class="our-blog__block-with-picture-image" src="image/picture-for-our-blog-block/pic-1.png")
                         .our-blog__description
                             p.our-blog__description-name-section art/t-shirt
                             h3.our-blog__description-name-works T-SHIRT DESIGN
@@ -376,10 +441,11 @@ html(lang="eng-ru")
                                                     the indu Stry's standard dummy text ever since the
                                                     1500s, an unknown printer took a galley of type a 
                                                     scrambled it to make a type specimen book.
-                            button.button-read-more Read More >>
+                            button.button-read-more.button-action Read More >>
                     
                     .our-blog__block-with-picture
-                        img(class="our-blog__block-with-picture-image" src="image/picture-for-our-blog-block/pic-2.png")
+                        .our-blog__block-picture
+                            img(class="our-blog__block-with-picture-image" src="image/picture-for-our-blog-block/pic-2.png")
                         .our-blog__description
                             p.our-blog__description-name-section art/t-shirt
                             h3.our-blog__description-name-works T-SHIRT DESIGN
@@ -390,10 +456,11 @@ html(lang="eng-ru")
                                                     the indu Stry's standard dummy text ever since the
                                                     1500s, an unknown printer took a galley of type a 
                                                     scrambled it to make a type specimen book.
-                            button.button-read-more Read More >>
+                            button.button-read-more.button-action Read More >>
 
                     .our-blog__block-with-picture
-                        img(class="our-blog__block-with-picture-image" src="image/picture-for-our-blog-block/pic-3.png")
+                        .our-blog__block-picture
+                            img(class="our-blog__block-with-picture-image" src="image/picture-for-our-blog-block/pic-3.png")
                         .our-blog__description
                             p.our-blog__description-name-section art/t-shirt
                             h3.our-blog__description-name-works T-SHIRT DESIGN
@@ -404,10 +471,11 @@ html(lang="eng-ru")
                                                     the indu Stry's standard dummy text ever since the
                                                     1500s, an unknown printer took a galley of type a 
                                                     scrambled it to make a type specimen book.
-                            button.button-read-more Read More >>
+                            button.button-read-more.button-action Read More >>
                     
                     .our-blog__block-with-picture
-                        img(class="our-blog__block-with-picture-image" src="image/picture-for-our-blog-block/pic-4.png")
+                        .our-blog__block-picture
+                            img(class="our-blog__block-with-picture-image" src="image/picture-for-our-blog-block/pic-4.png")
                         .our-blog__description
                             p.our-blog__description-name-section art/t-shirt
                             h3.our-blog__description-name-works T-SHIRT DESIGN
@@ -418,7 +486,7 @@ html(lang="eng-ru")
                                                     the indu Stry's standard dummy text ever since the
                                                     1500s, an unknown printer took a galley of type a 
                                                     scrambled it to make a type specimen book.
-                            button.button-read-more Read More >>           
+                            button.button-read-more.button-action Read More >>           
             .keep-in-touch
                 .conteiner
                     p.keep-in-touch__head KEEP IN TOUCH
@@ -442,12 +510,12 @@ html(lang="eng-ru")
                         input(class="forma__input-email" type="text" value="Email" onclick="this.value='';" onblur="this.value=!this.value?'Email':this.value;")
                         input(class="forma__input-subject" type="text" value="Subject" onclick="this.value='';" onblur="this.value=!this.value?'Subject':this.value;")
                         textarea(class="forma__input-message" onclick="this.value='';" onblur="this.value=!this.value?'Message':this.value;") Message
-                        input(class="forma__input-button" type="submit" value="SEND MESSAGE")
+                        input(class="forma__input-button button-action" type="submit" value="SEND MESSAGE")
         section.footer
             h3.footer__heading Let's Get Started Now. 
                 span.footer__heading-weig-text It's FREE
             p.footer__description 30 day free trial, Free plan allows up to 2 projects. Pay if you need more. Cancel anytime. No catches.
-            button.button.button_in-footer START FREE TRIAL
+            button.button.button_in-footer.button-action START FREE TRIAL
         .social-media
             .conteiner
                 .icon-with-block
@@ -468,7 +536,7 @@ html(lang="eng-ru")
                     .widget__icon
                         include ../image/icon-in-widgit-block-after-footer/tumblr-logo.svg
                 p.right Kazi Erfan &#169; All Rights Reserved
-        script(src="../javascript.js") 
+        script(src="js/javascript.js")
 
 
 
